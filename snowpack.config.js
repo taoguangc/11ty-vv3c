@@ -33,7 +33,7 @@ module.exports = {
   },
   buildOptions: {
     clean: true,
-    out: 'dist',
+    out: '_site',
   },
   //ganti ke port 8081 dari 8080 (karena 8080 bentrok dengan service worker/bugs di snowpack)
   devOptions: {
