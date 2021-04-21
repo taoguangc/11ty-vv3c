@@ -1,6 +1,6 @@
 @tailwind base;
 @layer base {
-  nav ul li a::before {
+  nav > div > ul li a::before {
     content: '';
     display: block;
     position: absolute;
@@ -13,8 +13,8 @@
     transition: 0.5s;
     transition-property: background-color, width;
   }
-  nav ul li.active a::before,
-  nav ul li a:hover::before {
+  nav > div > ul li.active a::before,
+  nav > div > ul li a:hover::before {
     width: 100%;
     background-color: #af7f0f;
   }
