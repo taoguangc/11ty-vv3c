@@ -1,0 +1,34 @@
+<header x-data="{ atTop: false }" @scroll.window="atTop = ( window.pageYOffset > 0) ? true : false " class="fixed top-0 z-50 w-full text-white transition-all duration-500" :class='{ "text-black bg-white shadow-2xl": atTop, "text-white": !atTop }'>
+  <nav class="relative mx-auto container px-4" x-data="{ open : false }" x-cloak>
+    <div class="h-16 flex flex-row justify-between items-center">
+      <h1 class="text-2xl font-light mb-0">{{ site.title }}</h1>
+      {% set navPages = collections.all | eleventyNavigation %}
+      <ul class="hidden lg:flex flex-wrap flex-row items-center">
+        {%- for entry in navPages %}
+          <li {% if entry.url == page.url %} class="active" {% endif %}>
+            <a href="{{ entry.url | url }}" class="relative block mx-8 py-8">{{ entry.title }}</a>
+          </li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="absolute z-40 inset-y-0 right-4 flex items-center lg:hidden">
+      <button @click.transition="open = !open" type="button" class="block lg:hidden px-2 focus:outline-none" :class="{ 'text-white transition transform-180': open }">
+        <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path x-show="open" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+          <path x-show="!open" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="fixed inset-0 lg:hidden w-full h-screen py-12 text-white bg-black" id="mobile-menu" x-show="open"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="transform -translate-x-full"
+    x-transition:leave="transition ease-in duration-300"
+    x-transition:leave-end="transform -translate-x-full">
+      {%- for entry in navPages %}
+        <li class="{% if entry.url !== page.url %}text-gray-600{% else %} text-white{% endif %}">
+          <a href="{{ entry.url | url }}" class="relative block mx-8 py-8">{{ entry.title }}</a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</header>

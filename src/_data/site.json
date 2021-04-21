@@ -1,0 +1,17 @@
+{
+  "title": "VV3C 家电助手",
+  "description": "VV3C超级说明书是以新媒体的形式替代传统纸质说明书的说明书解决方案",
+  "url": "https://vv3c.com",
+  "company": "杭州白拿拿网络科技有限公司",
+  "logo": "",
+  "socials": [
+    {
+      "url": "https://twitter.com/memphisww",
+      "image-file": "/images/twitter_logo_blue.svg"
+    },
+    {
+      "url": "https://facebook.com/memphiswebworkers/",
+      "image-file": "/images/f-ogo_rgb_hex-58.svg"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{% extends 'base.njk' %}
+
+{% block content %}
+  <section class="relative w-full h-64 lg:h-128 bg-cover bg-center" style="background-image: url({{ bgImg }});">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+  </section>
+  <section class="mx-auto py-32 text-center">
+    <h1>{{ title }}</h1>
+  </section>
+  
+  <article class="mx-auto container">
+    <ul class="flex lg:flex-row flex-wrap">
+      {% for work in collections.works %}
+      <li class="w-full lg:w-1/2 p-6">
+        <a href="{{ work.url }}">
+          <img src="{{ work.data.thumb }}" alt="">
+          <h5 class="mt-4">{{ work.data.title }}</h5>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </article>
+  
+{% endblock content %}

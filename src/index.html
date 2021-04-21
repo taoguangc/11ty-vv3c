@@ -1,0 +1,128 @@
+---
+layout: 'layouts/home.njk'
+title: '首页'
+eleventyNavigation:
+  key: Home
+  title: 首页
+  order: 1
+sliders:
+  - title: '手机一扫访问'
+    subtitle: '只需手机扫一扫即可观看产品介绍，直观又详细'
+    slide: ''
+  - title: '说明书数字化'
+    subtitle: '结合最新科技和互联网络，为企业提供更好的服务'
+    slide: ''
+---
+
+<section>
+  <div class="glide home">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides text-white">
+        <li class="glide__slide bg-center bg-cover flex" style="background-image: url(/images/home-01.jpg);">
+          <div class="m-auto text-center p-8 pt-12">
+            <h2 class="text-3xl lg:text-5xl font-thin tracking-widest">手机一扫访问</h2>
+            <h4 class="px-12">只需手机扫一扫即可观看产品介绍，直观又详细</h4>
+          </div>
+        </li>
+        <li class="glide__slide bg-center bg-cover flex" style="background-image: url(/images/home-02.jpg);">
+          <div class="m-auto text-center p-8 pt-12">
+            <h2 class="text-3xl lg:text-5xl font-thin tracking-widest">说明书数字化</h2>
+            <h4 class="px-12">结合最新科技和互联网络，为企业提供更好的服务</h4>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+      <button class="glide__bullet" data-glide-dir="=0"></button>
+      <button class="glide__bullet" data-glide-dir="=1"></button>
+    </div>
+  </div>
+</section>
+
+<section class="w-full bg-gray-100 py-24">
+  <div class="mx-auto max-w-7xl text-center flex flex-col lg:flex-row">
+    <div class="flex-1 m-8 py-12 bg-white shadow-lg">
+      <h2 class="text-6xl">6</h2>
+      <h3>年</h3>
+      <h5>视频说明书服务</h5>
+    </div>
+    <div class="flex-1 m-8 py-12 bg-white shadow-lg">
+      <h2 class="text-6xl">50</h2>
+      <h3>家</h3>
+      <h5>家电合作企业</h5>
+    </div>
+    <div class="flex-1 m-8 py-12 bg-white shadow-lg">
+      <h2 class="text-6xl">5000</h2>
+      <h3>万</h3>
+      <h5>智能说明书设备</h5>
+    </div>
+  </div>
+</section>
+
+<section class="w-full py-24 text-center">
+  <h2>案例展示</h2>
+  <h3 class="mb-24">我们的行业服务案例</h3>
+  <div class="glide works">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides text-white">
+        <li class="glide__slide">
+          <img src="/images/colmo_bingxiang.png" alt="" class="m-auto">
+        </li>
+        <li class="glide__slide">
+          <img src="/images/colmo_xiwanji.png" alt="" class="m-auto">
+        </li>
+        <li class="glide__slide">
+          <img src="/images/colmo_dianfanbao.png" alt="" class="m-auto">
+        </li>
+        <li class="glide__slide">
+          <img src="/images/colmo_ranqizao.png" alt="" class="m-auto">
+        </li>
+        <li class="glide__slide">
+          <img src="/images/colmo_ranqizao.png" alt="" class="m-auto">
+        </li>
+      </ul>
+    </div>
+    <div class="mt-24">
+      <a href="./works/" class="px-16 py-2 border border-black hover:text-white hover:bg-gray-900">更多</a>
+    </div>
+  </div>
+</section>
+
+<section class="w-full h-160 my-24 py-24 text-white bg-cover flex items-center" style="background-image: url(images/lidar_cover_image.jpg);">
+  <div class="container mx-auto flex flex-col lg:flex-row">
+    <div class="lg:w-3/5">
+    </div>
+    <div class="lg:w-2/5 p-12">
+      <hr class="w-24 border-t-2 mb-8" />
+      <h3>我们致力于打造更加</h3>
+      <h3>互联、直观、轻松的</h3>
+      <h3>现代生活。</h3>
+    </div>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="container mx-auto lg:px-12 flex flex-col lg:flex-row items-center">
+    <div class="flex-1">
+      {% Image "./src/images/photo-loop.jpg", "image no 01" %}
+    </div>
+    <div class="flex-1 p-12 lg:pr-0 lg:pl-24">
+      <h4>便捷</h4>
+      <h2>即学即用，操作便捷</h2>
+      <p class="text-base tracking-widest leading-loose">用您的手机扫描二维码即可下载App，跟着视频说明学习家电操作，安装，使用，操作技巧一看就明白。从此告别难懂的纸质说明书，学习家电使用方法快捷又方便！</p>
+    </div>
+  </div>
+</section>
+
+<section class="pb-20">
+  <div class="container mx-auto lg:px-12 flex flex-col lg:flex-row-reverse items-center">
+    <div class="flex-1">
+      {% Image "./src/images/photo-mobile.jpg", "image no 01" %}
+    </div>
+    <div class="flex-1 p-12 lg:pl-0 lg:pr-24">
+      <h4>直观</h4>
+      <h2>按需视频，分段解说</h2>
+      <p class="text-base tracking-widest leading-loose">实用的分段视频，将操作说明分类，让你安全快速的掌握陌生电器。精确定位到想学的步骤，想学哪步就学哪步。</p>
+    </div>
+  </div>
+</section>

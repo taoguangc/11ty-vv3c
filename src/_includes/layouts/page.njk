@@ -1,0 +1,14 @@
+{% extends "base.njk" %}
+
+{% block content %}
+  <section class="relative w-full">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <img src="{{ bgImg }}" alt="" class="object-cover w-full h-64 lg:h-128">
+  </section>
+  <section class="mx-auto py-32 text-center">
+    <h1>{{ title }}</h1>
+  </section>
+  <article class="mx-auto max-w-5xl">
+    {{ content | safe }}
+  </article>
+{% endblock content %}
